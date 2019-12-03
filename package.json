@@ -11,6 +11,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=12.x",
+    "yarn": ">=1.19.x"
+  },
   "dependencies": {
     "next": "^9.1.4",
     "react": "^16.12.0",

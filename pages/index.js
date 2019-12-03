@@ -1,9 +1,9 @@
-import DefaultLayout from './../components/DefaultLayout';
+import withLayout from './../components/withLayout';
 
 const Index = () => (
-    <DefaultLayout>
+    <div>
         <p>Hello Next.js</p>
-    </DefaultLayout>
+    </div>
 );
 
-export default Index;
+export default withLayout(Index);
