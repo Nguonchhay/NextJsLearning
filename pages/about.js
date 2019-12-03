@@ -1,9 +1,9 @@
-import DefaultLayout from './../components/DefaultLayout';
+import withLayout from './../components/withLayout';
 
 const About = () => (
-    <DefaultLayout>
+    <div>
       <p>This is the about page</p>
-    </DefaultLayout>
+    </div>
 );
 
-export default About;
+export default withLayout(About);
