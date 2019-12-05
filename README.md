@@ -24,6 +24,13 @@ cd NextJsLearning
 yarn install
 ```
 
+* Start local server
+```
+json-server data.json --port=3001
+```
+
+__Note__: you need to install `json-server` first by running `yarn global add json-server`
+
 * Start application
 ```
 yarn run dev
