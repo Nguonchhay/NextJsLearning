@@ -1,0 +1,11 @@
+.navbar {
+    padding: .3rem 1rem;
+}
+
+.main-nav {
+    .navbar-toggler {
+        &:focus {
+            border: 0;
+        }
+    }
+}
