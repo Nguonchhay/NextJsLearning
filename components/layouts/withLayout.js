@@ -1,18 +1,25 @@
-import Header from '../shared/Header';
+import React, { Fragment } from 'react';
 
-const layoutStyle = {
-    margin: 20,
-    padding: 20,
-    border: '1px solid #DDD'
+import AdminTemplate from './AdminTemplate';
+import DefaultTemplate from './DefaultTemplate';
+
+
+const initProps = {
+    isAdmin: false
 };
-  
-const withLayout = Page => {
-  return () => (
-    <div style={layoutStyle}>
-      <Header />
-      <Page />
-    </div>
-  )
+
+const withLayout = (Page, props = initProps) => () => {
+    const { isAdmin } = props;
+
+    const renderTemplate = isAdmin => {
+        return isAdmin ? <AdminTemplate page={Page} /> : <DefaultTemplate page={Page} />
+    }
+
+    return (
+        <Fragment>
+            {renderTemplate(isAdmin)}
+        </Fragment>
+    )
 };
 
 export default withLayout;

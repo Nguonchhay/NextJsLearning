@@ -1,9 +1,16 @@
-import withAdminLayout from './../../components/layouts/withAdminLayout';
+import Head from 'next/head';
+import withLayout from '../../components/layouts/withLayout';
 
-const Index = () => (
-    <div>
-        <p>Admin Dashboard</p>
-    </div>
-);
 
-export default withAdminLayout(Index);
+const Admin_Index = () => {
+  return (
+      <div>
+        <Head>
+          <title>Dashboard | NextJs</title>
+        </Head>
+        Dashboard
+      </div>
+  )
+};
+
+export default withLayout(Admin_Index, { isAdmin: true });
